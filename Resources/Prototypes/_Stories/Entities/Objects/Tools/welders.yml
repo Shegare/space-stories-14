@@ -71,6 +71,7 @@
   - type: Appearance
   - type: PhysicalComposition
     materialComposition:
-      Steel: 200
+      Steel: 500
+      Plastic: 250
   - type: StaticPrice
-    price: 40
+    price: 80

@@ -1,5 +1,5 @@
 ent-BaseStructureWall = базовая стена
-    .desc = Удерживает воздух внутри и серую волну снаружи.
+    .desc = Удерживает воздух внутри и грейтайдеров снаружи.
 ent-BaseWall = { ent-BaseStructureWall }
     .desc = { ent-BaseStructureWall.desc }
 ent-WallDiagonalBase = { ent-BaseStructureWall }

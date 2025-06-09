@@ -41,7 +41,7 @@
     - id: LoneOpsSpawn
     - id: DerelictCyborgSpawn
     # Stories Start
-    #- id: WizardSpawn 
+    #- id: WizardSpawn
     - id: SpafMigration
     - id: InquisitorSpawn
     # Stories End

@@ -106,7 +106,6 @@ entities:
     - type: MetaData
       name: Центральное Командование
     - type: Transform
-      parent: invalid
     - type: MapGrid
       chunks:
         0,0:
@@ -7589,8 +7588,6 @@ entities:
       pos: 65.5,-29.5
       parent: 1
     - type: DeviceNetwork
-      configurators:
-      - invalid
       deviceLists:
       - 52
   - uid: 225
@@ -47173,8 +47170,6 @@ entities:
       pos: 65.5,-27.5
       parent: 1
     - type: DeviceNetwork
-      configurators:
-      - invalid
       deviceLists:
       - 52
     - type: AtmosPipeColor
@@ -47230,8 +47225,6 @@ entities:
       pos: 66.5,-47.5
       parent: 1
     - type: DeviceNetwork
-      configurators:
-      - invalid
       deviceLists:
       - 28
     - type: AtmosPipeColor
@@ -47243,8 +47236,6 @@ entities:
       pos: 66.5,-68.5
       parent: 1
     - type: DeviceNetwork
-      configurators:
-      - invalid
       deviceLists:
       - 28
     - type: AtmosPipeColor
@@ -48646,8 +48637,6 @@ entities:
       pos: 66.5,-46.5
       parent: 1
     - type: DeviceNetwork
-      configurators:
-      - invalid
       deviceLists:
       - 28
     - type: AtmosPipeColor
@@ -48659,8 +48648,6 @@ entities:
       pos: 66.5,-69.5
       parent: 1
     - type: DeviceNetwork
-      configurators:
-      - invalid
       deviceLists:
       - 28
     - type: AtmosPipeColor
@@ -52399,9 +52386,9 @@ entities:
         [/italic]
 
 
-        [bold]Утверждено ОСО:[/bold][italic] 
+        [bold]Утверждено ОСО:[/bold][italic]
 
-        От: 23.02.3025 
+        От: 23.02.3025
 
         Подпись: ₯₰[/italic][bold]                   ‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾[/bold]
     - type: SolutionContainerManager
@@ -52524,9 +52511,9 @@ entities:
         [/italic]
 
 
-        [bold]Утверждено ОСО:[/bold][italic] 
+        [bold]Утверждено ОСО:[/bold][italic]
 
-        От: 23.02.3025 
+        От: 23.02.3025
 
         Подпись: ₯₰[/italic][bold]                   ‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾[/bold]
     - type: SolutionContainerManager
@@ -52648,9 +52635,9 @@ entities:
         [/italic]
 
 
-        [bold]Утверждено ОСО:[/bold][italic] 
+        [bold]Утверждено ОСО:[/bold][italic]
 
-        От: 23.02.3025 
+        От: 23.02.3025
 
         Подпись: ₯₰[/italic][bold]                   ‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾[/bold]
     - type: SolutionContainerManager

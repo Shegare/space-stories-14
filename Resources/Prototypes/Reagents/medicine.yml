@@ -576,6 +576,11 @@
     Medicine:
       metabolismRate: 0.1
       effects:
+      # Stories-Corpium-Start
+      - !type:AdjustReagent
+        reagent: STCorpium
+        amount: -100
+      # Stories-Corpium-End
       - !type:HealthChange
         damage:
           types:

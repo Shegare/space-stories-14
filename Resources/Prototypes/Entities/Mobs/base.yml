@@ -239,3 +239,10 @@
     bloodlossHealDamage:
       types:
         Bloodloss: -1
+  # Stories-Corpium-Start
+  - type: ReagentStatusIcon
+    solution: chemicals
+    reagent:
+      ReagentId: STCorpium
+    statusIcon: STCorpiumInfected
+  # Stories-Corpium-End

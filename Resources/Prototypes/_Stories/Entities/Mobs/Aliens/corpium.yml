@@ -4,21 +4,38 @@
   id: STMobCorpium
   description: A very scary scorpion from outer space. Don't let it bite you.
   components:
+  - type: HTN
+    rootTask:
+      task: DragonCarpCompound
+  - type: NPCImprintingOnSpawnBehaviour
+    spawnFriendsSearchRadius: 3
+    whitelist:
+      components:
+      - Corpium
+  - type: MobStateActions
+    actions:
+      Alive:
+      - STActionCorpiumHit
+  - type: GhostRole
+    makeSentient: true
+    name: stories-ghost-role-information-corpium-name
+    description: stories-ghost-role-information-corpium-desc
+    raffle:
+      settings: short
+  - type: GhostTakeoverAvailable
   - type: Bloodstream
     chemicalSolutionName: corpiumChemicals
   - type: StatusIcon
     bounds: -0.5,-0.5,0.5,0.5
   - type: Corpium
   - type: ReagentStatusIcon
+    allowedStates:
+    - Alive
+    - Critical
     solution: melee
     reagent:
       ReagentId: STCorpium
     statusIcon: STCorpiumReady
-  - type: GhostRole
-    name: stories-ghost-role-information-corpium-name
-    description: stories-ghost-role-information-corpium-desc
-    raffle:
-      settings: default
   - type: Nightvision
   - type: Vocal
     sounds:

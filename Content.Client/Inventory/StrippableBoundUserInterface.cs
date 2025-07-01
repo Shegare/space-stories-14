@@ -50,7 +50,20 @@ namespace Content.Client.Inventory
 
         [ViewVariables]
         private readonly EntityUid _virtualHiddenEntity;
-        // Stories-Cards
+
+        /// <summary>
+        /// The current amount of added hand buttons.
+        /// </summary>
+        [ViewVariables]
+        private int _handCount;
+
+        /// <summary>
+        /// The current shape of the inventory, needed to calculate the window size.
+        /// </summary>
+        [ViewVariables]
+        private Vector2i _inventoryDimensions;
+
+        // Stories-Cards Start
         [ViewVariables]
         private readonly EntityUid _virtualHiddenEntityCard;
 
@@ -58,7 +71,8 @@ namespace Content.Client.Inventory
         private const string HiddenCardEntityID = "STStrippingHiddenEntityCard";
 
         private readonly TagSystem _tagSystem;
-        // Stories-Cards
+        // Stories-Cards End
+        
         public StrippableBoundUserInterface(EntityUid owner, Enum uiKey) : base(owner, uiKey)
         {
             _examine = EntMan.System<ExamineSystem>();
@@ -105,6 +119,8 @@ namespace Content.Client.Inventory
                 return;
 
             _strippingMenu.ClearButtons();
+            _handCount = 0;
+            _inventoryDimensions = Vector2i.Zero;
 
             if (EntMan.TryGetComponent<InventoryComponent>(Owner, out var inv))
             {
@@ -164,9 +180,15 @@ namespace Content.Client.Inventory
             // TODO allow windows to resize based on content's desired size
 
             // for now: shit-code
-            // this breaks for drones (too many hands, lots of empty vertical space), and looks shit for monkeys and the like.
-            // but the window is realizable, so eh.
-            _strippingMenu.SetSize = new Vector2(220, snare?.IsEnsnared == true ? 550 : 530);
+            // calculate the window size manually
+            // +20 horizontally and vertically from the ContentsContainer margin
+            // +16 vertically from the BoxContainer margin
+            // +27 vertically from the window header
+            var horizontalMenuSize = Math.Max(200, Math.Max(_handCount, _inventoryDimensions.X + 1) * (SlotControl.DefaultButtonSize + ButtonSeparation) + 20);
+            var verticalMenuSize = Math.Max(200, (_inventoryDimensions.Y + (_handCount > 0 ? 2 : 1)) * (SlotControl.DefaultButtonSize + ButtonSeparation) + 53);
+            if (snare?.IsEnsnared == true)
+                verticalMenuSize += 20;
+            _strippingMenu.SetSize = new Vector2(horizontalMenuSize, verticalMenuSize);
         }
 
         private void AddHandButton(Hand hand)
@@ -184,15 +206,18 @@ namespace Content.Client.Inventory
 
             UpdateEntityIcon(button, hand.HeldEntity);
 
-            // Stories-Cards
+            // Stories-Cards Start
             var entity = hand.HeldEntity;
 
             if (entity != null && _tagSystem.HasTag(entity.Value, "STCard"))
                 entity = _virtualHiddenEntityCard;
 
             UpdateEntityIcon(button, entity);
-            // Stories-Cards
+            // Stories-Cards End
+            
             _strippingMenu!.HandsContainer.AddChild(button);
+            LayoutContainer.SetPosition(button, new Vector2i(_handCount, 0) * (SlotControl.DefaultButtonSize + ButtonSeparation));
+            _handCount++;
         }
 
         private void SlotPressed(GUIBoundKeyEventArgs ev, SlotControl slot)
@@ -241,6 +266,10 @@ namespace Content.Client.Inventory
             UpdateEntityIcon(button, entity);
 
             LayoutContainer.SetPosition(button, slotDef.StrippingWindowPos * (SlotControl.DefaultButtonSize + ButtonSeparation));
+            if (slotDef.StrippingWindowPos.X > _inventoryDimensions.X)
+                _inventoryDimensions = new Vector2i(slotDef.StrippingWindowPos.X, _inventoryDimensions.Y);
+            if (slotDef.StrippingWindowPos.Y > _inventoryDimensions.Y)
+                _inventoryDimensions = new Vector2i(_inventoryDimensions.X, slotDef.StrippingWindowPos.Y);
         }
 
         private void UpdateEntityIcon(SlotControl button, EntityUid? entity)

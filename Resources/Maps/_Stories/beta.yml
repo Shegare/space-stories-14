@@ -111,9 +111,7 @@ entities:
     - type: Transform
     - type: Map
       mapPaused: True
-    - type: PhysicsMap
     - type: GridTree
-    - type: MovedGrids
     - type: Broadphase
     - type: OccluderTree
     - type: Parallax
@@ -108762,7 +108760,7 @@ entities:
       setupAvailableNetworks:
       - SurveillanceCameraSecurity
       nameSet: True
-      id: Гидропоника "Общая тюрьма"
+      id: Гидропоника "Генпоп"
   - uid: 16140
     components:
     - type: Transform
@@ -108880,7 +108878,7 @@ entities:
       setupAvailableNetworks:
       - SurveillanceCameraSecurity
       nameSet: True
-      id: Вход "Общая тюрьма"
+      id: Вход "Генпоп"
   - uid: 16151
     components:
     - type: Transform
@@ -108891,7 +108889,7 @@ entities:
       setupAvailableNetworks:
       - SurveillanceCameraSecurity
       nameSet: True
-      id: Общая тюрьма
+      id: Генпоп
 - proto: SurveillanceCameraService
   entities:
   - uid: 16152

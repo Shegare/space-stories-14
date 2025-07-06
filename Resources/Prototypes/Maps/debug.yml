@@ -26,7 +26,16 @@
           mapNameTemplate: "Dev"
         - type: StationJobs
           availableJobs:
-            Captain: [ -1, -1 ]
+            PRISONHeadOfPrison: [ -1, -1 ]
+            IAA: [ -1, -1 ]
+            PRISONEngineer: [ -1, -1 ]
+            STBrigmedic: [ -1, -1 ]
+            STPartyMaker: [ -1, -1 ]
+            STSecurityClown: [ -1, -1 ]
+            PRISONMedic: [ -1, -1 ]
+            GuardianNt: [ -1, -1 ]
+            STCommandMaid: [ -1, -1 ]
+            PRISONOfficer: [ -1, -1 ]
 
 - type: gameMap
   id: TestTeg

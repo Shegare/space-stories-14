@@ -78,6 +78,8 @@ cargo-funding-alloc-console-label-save-fail = [bold]Revenue Divisions Invalid![/
        *[-1] -
     }{ $val }%)[/color]
 
+
+
 # Slip template
 
 cargo-acquisition-slip-body = [head=3]Информация Товара[/head]

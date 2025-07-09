@@ -1,4 +1,4 @@
-# rmaction  
+# rmaction
 cmd-rmaction-desc = Удаляет действие у сущности.
 cmd-rmaction-help = rmaction <EntityUid> <ActionUid>
 cmd-rmaction-invalid-args = Ожидается ровно 2 аргумента.

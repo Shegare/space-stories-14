@@ -239,3 +239,5 @@ ghost-role-information-gingerbread-description =
     Распространяйте паточную вкуснятину и хорошее настроение.
 ghost-role-information-wizard-name = Волшебник
 ghost-role-information-wizard-desc = ТЫ ВОЛШЕБНИК! Покажи станции, из чего сделана твоя магия.
+ghost-role-information-emotional-support-scurret-name = Эмоциональная поддержка Скюррет
+ghost-role-information-emotional-support-scurret-description = Поддерживайте экипаж, будьте очаровательным, часто говорите "ва".

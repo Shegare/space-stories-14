@@ -211,7 +211,7 @@ namespace Content.Client.Inventory
             UpdateEntityIcon(button, heldEntity);
 
             // Stories-Cards Start
-            var entity = hand.HeldEntity;
+            var entity = heldEntity;
 
             if (entity != null && _tagSystem.HasTag(entity.Value, "STCard"))
                 entity = _virtualHiddenEntityCard;

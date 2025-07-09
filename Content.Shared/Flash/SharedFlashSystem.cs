@@ -20,6 +20,7 @@ using Robust.Shared.Prototypes;
 using Robust.Shared.Random;
 using Robust.Shared.Timing;
 using System.Linq;
+using Content.Shared._Stories.Debuff;
 
 namespace Content.Shared.Flash;
 
@@ -157,6 +158,11 @@ public abstract class SharedFlashSystem : EntitySystem
 
         if (attempt.Cancelled)
             return;
+        
+        // Stories-FlashDebuff Start
+        TryComp<FlashDebuffComponent>(target, out var flashDebuffComponent);
+        flashDuration *= flashDebuffComponent?.CoefficientDuration ?? 1;
+        // Stories-FlashDebuff Start
 
         // don't paralyze, slowdown or convert to rev if the target is immune to flashes
         if (!_statusEffectsSystem.TryAddStatusEffect<FlashedComponent>(target, FlashedKey, flashDuration, true))
@@ -254,6 +260,9 @@ public abstract class SharedFlashSystem : EntitySystem
 
     private void OnFlashImmunityFlashAttempt(Entity<FlashImmunityComponent> ent, ref FlashAttemptEvent args)
     {
+        if (TryComp<FlashDebuffComponent>(args.User, out var comp) && comp.BlockFlashImmunity) // Stories-FlashDebuff
+            return;
+        
         if (ent.Comp.Enabled)
             args.Cancelled = true;
     }

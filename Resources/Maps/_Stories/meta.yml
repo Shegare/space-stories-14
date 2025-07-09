@@ -86523,39 +86523,11 @@ entities:
     - type: Transform
       pos: 0.747241,-48.310314
       parent: 2
-    - type: HandheldLight
-      toggleActionEntity: 30
-    - type: ContainerContainer
-      containers:
-        cell_slot: !type:ContainerSlot
-          showEnts: False
-          occludes: True
-          ent: null
-        actions: !type:Container
-          showEnts: False
-          occludes: True
-          ents:
-          - 30
-    - type: ActionsContainer
   - uid: 31
     components:
     - type: Transform
       pos: 0.48161602,-48.51344
       parent: 2
-    - type: HandheldLight
-      toggleActionEntity: 32
-    - type: ContainerContainer
-      containers:
-        cell_slot: !type:ContainerSlot
-          showEnts: False
-          occludes: True
-          ent: null
-        actions: !type:Container
-          showEnts: False
-          occludes: True
-          ents:
-          - 32
-    - type: ActionsContainer
   - uid: 13392
     components:
     - type: Transform
@@ -86608,20 +86580,6 @@ entities:
     - type: Transform
       pos: 9.450002,23.638304
       parent: 2
-    - type: HandheldLight
-      toggleActionEntity: 27
-    - type: ContainerContainer
-      containers:
-        cell_slot: !type:ContainerSlot
-          showEnts: False
-          occludes: True
-          ent: 28
-        actions: !type:Container
-          showEnts: False
-          occludes: True
-          ents:
-          - 27
-    - type: ActionsContainer
   - uid: 13399
     components:
     - type: Transform
@@ -130668,49 +130626,16 @@ entities:
     - type: Transform
       pos: -16.37137,-14.418222
       parent: 2
-    - type: GasTank
-      toggleActionEntity: 14
-    - type: Jetpack
-      toggleActionEntity: 15
-    - type: ActionsContainer
-    - type: ContainerContainer
-      containers:
-        actions: !type:Container
-          ents:
-          - 15
-          - 14
   - uid: 16
     components:
     - type: Transform
       pos: -16.55887,-14.105722
       parent: 2
-    - type: GasTank
-      toggleActionEntity: 17
-    - type: Jetpack
-      toggleActionEntity: 18
-    - type: ActionsContainer
-    - type: ContainerContainer
-      containers:
-        actions: !type:Container
-          ents:
-          - 18
-          - 17
   - uid: 23
     components:
     - type: Transform
       pos: -16.540573,-13.293222
       parent: 2
-    - type: GasTank
-      toggleActionEntity: 24
-    - type: Jetpack
-      toggleActionEntity: 25
-    - type: ActionsContainer
-    - type: ContainerContainer
-      containers:
-        actions: !type:Container
-          ents:
-          - 25
-          - 24
   - uid: 19562
     components:
     - type: Transform
@@ -130738,17 +130663,6 @@ entities:
     - type: Transform
       pos: -9.570677,44.593655
       parent: 2
-    - type: GasTank
-      toggleActionEntity: 9
-    - type: Jetpack
-      toggleActionEntity: 10
-    - type: ActionsContainer
-    - type: ContainerContainer
-      containers:
-        actions: !type:Container
-          ents:
-          - 10
-          - 9
   - uid: 19566
     components:
     - type: Transform
@@ -133636,14 +133550,6 @@ entities:
     - type: Transform
       pos: 48.344383,30.593039
       parent: 2
-    - type: GasTank
-      toggleActionEntity: 20
-    - type: ActionsContainer
-    - type: ContainerContainer
-      containers:
-        actions: !type:Container
-          ents:
-          - 20
   - uid: 10683
     components:
     - type: Transform
@@ -133736,14 +133642,6 @@ entities:
     - type: Transform
       pos: 18.413866,-29.368267
       parent: 2
-    - type: GasTank
-      toggleActionEntity: 7
-    - type: ActionsContainer
-    - type: ContainerContainer
-      containers:
-        actions: !type:Container
-          ents:
-          - 7
   - uid: 19933
     components:
     - type: Transform
@@ -133941,27 +133839,11 @@ entities:
     - type: Transform
       pos: 52.344383,30.608664
       parent: 2
-    - type: GasTank
-      toggleActionEntity: 12
-    - type: ActionsContainer
-    - type: ContainerContainer
-      containers:
-        actions: !type:Container
-          ents:
-          - 12
   - uid: 21
     components:
     - type: Transform
       pos: 52.625633,30.499289
       parent: 2
-    - type: GasTank
-      toggleActionEntity: 22
-    - type: ActionsContainer
-    - type: ContainerContainer
-      containers:
-        actions: !type:Container
-          ents:
-          - 22
   - uid: 19967
     components:
     - type: Transform

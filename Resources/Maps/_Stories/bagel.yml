@@ -71808,14 +71808,6 @@ entities:
     - type: Transform
       pos: 56.09298,8.675501
       parent: 2
-    - type: GasTank
-      toggleActionEntity: 15
-    - type: ActionsContainer
-    - type: ContainerContainer
-      containers:
-        actions: !type:Container
-          ents:
-          - 15
   - uid: 11065
     components:
     - type: Transform
@@ -75488,39 +75480,11 @@ entities:
     - type: Transform
       pos: 0.76574916,21.115711
       parent: 2
-    - type: HandheldLight
-      toggleActionEntity: 17
-    - type: ContainerContainer
-      containers:
-        cell_slot: !type:ContainerSlot
-          showEnts: False
-          occludes: True
-          ent: null
-        actions: !type:Container
-          showEnts: False
-          occludes: True
-          ents:
-          - 17
-    - type: ActionsContainer
   - uid: 20
     components:
     - type: Transform
       pos: 0.68762416,21.240711
       parent: 2
-    - type: HandheldLight
-      toggleActionEntity: 21
-    - type: ContainerContainer
-      containers:
-        cell_slot: !type:ContainerSlot
-          showEnts: False
-          occludes: True
-          ent: null
-        actions: !type:Container
-          showEnts: False
-          occludes: True
-          ents:
-          - 21
-    - type: ActionsContainer
   - uid: 11561
     components:
     - type: Transform
@@ -114358,37 +114322,10 @@ entities:
     components:
     - type: Transform
       parent: 6
-    - type: GasTank
-      toggleActionEntity: 8
-    - type: Jetpack
-      toggleActionEntity: 9
-    - type: Physics
-      canCollide: False
-    - type: ActionsContainer
-    - type: ContainerContainer
-      containers:
-        actions: !type:Container
-          ents:
-          - 9
-          - 8
-    - type: InsideEntityStorage
   - uid: 11
     components:
     - type: Transform
       parent: 10
-    - type: GasTank
-      toggleActionEntity: 12
-    - type: Jetpack
-      toggleActionEntity: 13
-    - type: Physics
-      canCollide: False
-    - type: ActionsContainer
-    - type: ContainerContainer
-      containers:
-        actions: !type:Container
-          ents:
-          - 13
-          - 12
     - type: InsideEntityStorage
   - uid: 17251
     components:
@@ -114502,22 +114439,6 @@ entities:
     - type: Transform
       pos: -3.7830997,-6.3230777
       parent: 2
-    - type: HandheldLight
-      toggleActionEntity: 19
-    - type: ContainerContainer
-      containers:
-        cell_slot: !type:ContainerSlot
-          showEnts: False
-          occludes: True
-          ent: null
-        actions: !type:Container
-          showEnts: False
-          occludes: True
-          ents:
-          - 19
-    - type: Physics
-      canCollide: True
-    - type: ActionsContainer
   - uid: 17270
     components:
     - type: Transform

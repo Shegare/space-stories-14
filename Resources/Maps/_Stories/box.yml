@@ -89653,24 +89653,6 @@ entities:
     - type: Transform
       pos: 49.481064,16.680466
       parent: 2
-    - type: HandheldLight
-      toggleActionEntity: 17
-    - type: ContainerContainer
-      containers:
-        cellslot_cell_container: !type:ContainerSlot
-          showEnts: False
-          occludes: True
-          ent: null
-        cell_slot: !type:ContainerSlot
-          showEnts: False
-          occludes: True
-          ent: null
-        actions: !type:Container
-          showEnts: False
-          occludes: True
-          ents:
-          - 17
-    - type: ActionsContainer
   - uid: 13908
     components:
     - type: Transform
@@ -128867,20 +128849,6 @@ entities:
     components:
     - type: Transform
       parent: 7
-    - type: GasTank
-      toggleActionEntity: 9
-    - type: Jetpack
-      toggleActionEntity: 10
-    - type: Physics
-      canCollide: False
-    - type: ActionsContainer
-    - type: ContainerContainer
-      containers:
-        actions: !type:Container
-          ents:
-          - 10
-          - 9
-    - type: InsideEntityStorage
   - uid: 11333
     components:
     - type: Transform
@@ -132766,19 +132734,9 @@ entities:
   entities:
   - uid: 12
     components:
-    - type: MetaData
-      name: empty tank
     - type: Transform
       pos: 79.485985,-43.45112
       parent: 2
-    - type: GasTank
-      toggleActionEntity: 13
-    - type: ActionsContainer
-    - type: ContainerContainer
-      containers:
-        actions: !type:Container
-          ents:
-          - 13
 - proto: OxygenTankFilled
   entities:
   - uid: 14
@@ -132786,14 +132744,6 @@ entities:
     - type: Transform
       pos: 78.58031,-56.4234
       parent: 2
-    - type: GasTank
-      toggleActionEntity: 15
-    - type: ActionsContainer
-    - type: ContainerContainer
-      containers:
-        actions: !type:Container
-          ents:
-          - 15
   - uid: 19915
     components:
     - type: Transform

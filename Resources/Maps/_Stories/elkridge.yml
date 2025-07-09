@@ -48388,20 +48388,6 @@ entities:
     - type: Transform
       pos: 34.637638,-22.083765
       parent: 2
-    - type: HandheldLight
-      toggleActionEntity: 15
-    - type: ContainerContainer
-      containers:
-        cell_slot: !type:ContainerSlot
-          showEnts: False
-          occludes: True
-          ent: null
-        actions: !type:Container
-          showEnts: False
-          occludes: True
-          ents:
-          - 15
-    - type: ActionsContainer
   - uid: 6774
     components:
     - type: Transform
@@ -56045,27 +56031,11 @@ entities:
     - type: Transform
       pos: 14.614994,-25.351982
       parent: 2
-    - type: GasTank
-      toggleActionEntity: 5
-    - type: ActionsContainer
-    - type: ContainerContainer
-      containers:
-        actions: !type:Container
-          ents:
-          - 5
   - uid: 12
     components:
     - type: Transform
       pos: -42.005676,-47.54647
       parent: 2
-    - type: GasTank
-      toggleActionEntity: 13
-    - type: ActionsContainer
-    - type: ContainerContainer
-      containers:
-        actions: !type:Container
-          ents:
-          - 13
 - proto: EmergencyLight
   entities:
   - uid: 8034
@@ -84144,33 +84114,11 @@ entities:
     - type: Transform
       pos: 21.593834,-14.542587
       parent: 2
-    - type: GasTank
-      toggleActionEntity: 7
-    - type: Jetpack
-      toggleActionEntity: 8
-    - type: ActionsContainer
-    - type: ContainerContainer
-      containers:
-        actions: !type:Container
-          ents:
-          - 8
-          - 7
   - uid: 9
     components:
     - type: Transform
       pos: 21.578209,-14.323837
       parent: 2
-    - type: GasTank
-      toggleActionEntity: 10
-    - type: Jetpack
-      toggleActionEntity: 11
-    - type: ActionsContainer
-    - type: ContainerContainer
-      containers:
-        actions: !type:Container
-          ents:
-          - 11
-          - 10
 - proto: Joint
   entities:
   - uid: 11809

@@ -57602,14 +57602,6 @@ entities:
     - type: Transform
       pos: 21.40016,15.580185
       parent: 2
-    - type: GasTank
-      toggleActionEntity: 20
-    - type: ActionsContainer
-    - type: ContainerContainer
-      containers:
-        actions: !type:Container
-          ents:
-          - 20
 - proto: DoubleEmergencyOxygenTankFilled
   entities:
   - uid: 8823
@@ -61575,20 +61567,6 @@ entities:
     - type: Transform
       pos: 2.1188111,-26.450115
       parent: 2
-    - type: HandheldLight
-      toggleActionEntity: 22
-    - type: ContainerContainer
-      containers:
-        cell_slot: !type:ContainerSlot
-          showEnts: False
-          occludes: True
-          ent: null
-        actions: !type:Container
-          showEnts: False
-          occludes: True
-          ents:
-          - 22
-    - type: ActionsContainer
 - proto: FlippoEngravedLighter
   entities:
   - uid: 9301
@@ -89962,17 +89940,6 @@ entities:
     - type: Transform
       pos: 26.612125,18.552578
       parent: 2
-    - type: GasTank
-      toggleActionEntity: 17
-    - type: Jetpack
-      toggleActionEntity: 18
-    - type: ActionsContainer
-    - type: ContainerContainer
-      containers:
-        actions: !type:Container
-          ents:
-          - 18
-          - 17
   - uid: 13231
     components:
     - type: Transform
@@ -89985,17 +89952,6 @@ entities:
     - type: Transform
       pos: 26.467203,15.589547
       parent: 2
-    - type: GasTank
-      toggleActionEntity: 14
-    - type: Jetpack
-      toggleActionEntity: 15
-    - type: ActionsContainer
-    - type: ContainerContainer
-      containers:
-        actions: !type:Container
-          ents:
-          - 15
-          - 14
   - uid: 13232
     components:
     - type: Transform

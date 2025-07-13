@@ -76,9 +76,9 @@ public abstract class SharedHandRenamerSystem : EntitySystem
         {
             handRenamer.Charge -= 1;
             _renameSystem.Rename(target, handLabeler.AssignedLabel, handRenamer.LifeTime);
-            Dirty(uid, handRenamer);
         }
 
+        Dirty(uid, handRenamer);
         result = Loc.GetString("stories-hand-renamer-successfully-applied", ("charge", handRenamer.Charge - 1));
     }
 }

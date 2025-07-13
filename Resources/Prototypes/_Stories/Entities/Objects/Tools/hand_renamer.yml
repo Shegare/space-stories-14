@@ -1,0 +1,13 @@
+- type: entity
+  parent: HandLabeler
+  id: HandRenamer
+  name: hand renamer
+  description: Hand renamer, learned to rename objects, confusing people. Renaming dissipates after 3 minutes. Initially has 5 charges.
+  components:
+  - type: Sprite
+    sprite: _Stories/Objects/Tools/hand_renamer.rsi
+    state: hand_renamer
+  - type: Item
+    sprite: _Stories/Objects/Tools/hand_renamer.rsi
+    storedRotation: -90
+  - type: HandRenamer

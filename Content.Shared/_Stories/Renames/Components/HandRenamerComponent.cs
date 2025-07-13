@@ -43,7 +43,7 @@ public abstract class SharedHandRenamerSystem : EntitySystem
 
         _popupSystem.PopupClient(result, user, user);
 
-        // Log labeling
+        // Log renaming
         _adminLogger.Add(LogType.Action, LogImpact.Low,
             $"{ToPrettyString(user):user} renamed {ToPrettyString(target):target} with {ToPrettyString(uid):labeler}");
     }

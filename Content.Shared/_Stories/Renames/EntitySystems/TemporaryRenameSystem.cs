@@ -21,7 +21,7 @@ public sealed class TemporaryRenameSystem : EntitySystem
         var query = EntityQueryEnumerator<TemporaryRenameComponent>();
         while (query.MoveNext(out var uid, out var comp))
         {
-            if (comp.LifeTime <= 0)
+            if (comp.LifeTime == null || comp.LifeTime <= 0)
             {
                 comp.CurrentName = null;
                 _nameModifier.RefreshNameModifiers(uid);
@@ -43,10 +43,11 @@ public sealed class TemporaryRenameSystem : EntitySystem
         _nameModifier.RefreshNameModifiers(ent.Owner);
     }
 
-    public void Rename(EntityUid uid, string? text, MetaDataComponent? metadata = null, TemporaryRenameComponent? rename = null)
+    public void Rename(EntityUid uid, string? text, float lifeTime)
     {
-        rename ??= EnsureComp<TemporaryRenameComponent>(uid);
+        var rename = EnsureComp<TemporaryRenameComponent>(uid);
 
+        rename.LifeTime = lifeTime;
         rename.CurrentName = text;
         _nameModifier.RefreshNameModifiers(uid);
 

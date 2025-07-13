@@ -1,3 +1,4 @@
+using Content.Shared._Stories.Renames;
 using Content.Shared.Administration.Logs;
 using Content.Shared.Database;
 using Content.Shared.Interaction;
@@ -98,6 +99,9 @@ public abstract class SharedHandLabelerSystem : EntitySystem
 
     private void AfterInteractOn(EntityUid uid, HandLabelerComponent handLabeler, AfterInteractEvent args)
     {
+        if (HasComp<HandRenamerComponent>(uid)) // Stories-HandRenamer
+            return;
+
         if (args.Target is not { Valid: true } target || _whitelistSystem.IsWhitelistFail(handLabeler.Whitelist, target) || !args.CanReach)
             return;
 

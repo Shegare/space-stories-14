@@ -10,5 +10,5 @@ public sealed partial class TemporaryRenameComponent : Component
     public string? CurrentName { get; set; }
 
     [DataField, AutoNetworkedField]
-    public float LifeTime = 10f;
+    public float? LifeTime;
 }

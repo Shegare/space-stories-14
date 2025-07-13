@@ -35,17 +35,17 @@ public abstract class SharedHandRenamerSystem : EntitySystem
         Renaming(uid, target, args.User, handRenamer);
     }
 
-    private void Renaming(EntityUid uid, EntityUid target, EntityUid User, HandRenamerComponent handRenamer)
+    private void Renaming(EntityUid uid, EntityUid target, EntityUid user, HandRenamerComponent handRenamer)
     {
         AddNewNameTo(uid, handRenamer, target, out var result);
         if (result == null)
             return;
 
-        _popupSystem.PopupClient(result, User, User);
+        _popupSystem.PopupClient(result, user, user);
 
         // Log labeling
         _adminLogger.Add(LogType.Action, LogImpact.Low,
-            $"{ToPrettyString(User):user} renamed {ToPrettyString(target):target} with {ToPrettyString(uid):labeler}");
+            $"{ToPrettyString(user):user} renamed {ToPrettyString(target):target} with {ToPrettyString(uid):labeler}");
     }
 
     private void AddNewNameTo(EntityUid uid, HandRenamerComponent? handRenamer, EntityUid target, out string? result)

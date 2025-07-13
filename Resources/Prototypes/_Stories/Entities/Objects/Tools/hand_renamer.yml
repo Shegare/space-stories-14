@@ -2,7 +2,7 @@
   parent: HandLabeler
   id: HandRenamer
   name: hand renamer
-  description: Hand renamer, learned to rename objects, confusing people. Renaming dissipates after 3 minutes. Initially has 5 charges.
+  description: Hand renamer, learned to rename objects, confusing people.
   components:
   - type: Sprite
     sprite: _Stories/Objects/Tools/hand_renamer.rsi

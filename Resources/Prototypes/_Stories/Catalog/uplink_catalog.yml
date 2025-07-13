@@ -1,7 +1,7 @@
 # Weapons
 - type: listing
   id: STUplinkGarrote
-  name: uplink-garrote-name 
+  name: uplink-garrote-name
   description: uplink-garrote-desc
   productEntity: STGarrote
   discountCategory: usualDiscounts
@@ -12,7 +12,7 @@
   categories:
   - UplinkWeaponry
 
-# Pointless  
+# Pointless
 - type: listing
   id: UplinkRichard
   name: uplink-richard-name
@@ -52,6 +52,18 @@
     Telecrystal: 6
   categories:
   - UplinkDisruption
+
+# Deception
+- type: listing
+  id: UplinkHandRenamer
+  name: stories-uplink-hand-renamer-name
+  description: stories-uplink-hand-renamer-desc
+  icon: { sprite: /Textures/_Stories/Objects/Tools/hand_renamer.rsi, state: hand_renamer }
+  productEntity: HandRenamer
+  cost:
+    Telecrystal: 3
+  categories:
+  - UplinkDeception
 
 # Wearables
 - type: listing
@@ -128,7 +140,7 @@
 
 - type: listing
   id: STUplinkClothingEyesHudSyndicateAgent
-  name: uplink-clothing-eyes-hud-syndicate-agent-name 
+  name: uplink-clothing-eyes-hud-syndicate-agent-name
   description: uplink-clothing-eyes-hud-syndicate-agent-desc
   productEntity: ClothingEyesHudSyndicateAgent
   discountCategory: rareDiscounts

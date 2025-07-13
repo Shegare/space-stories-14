@@ -67,7 +67,7 @@ public abstract class SharedHandRenamerSystem : EntitySystem
         if (handLabeler.AssignedLabel == string.Empty)
         {
             if (_netManager.IsServer)
-                _renameSystem.Rename(target, null, handRenamer.LifeTime);
+                _renameSystem.Rename(target, null, handRenamer.RenameLifeTime);
             result = Loc.GetString("stories-hand-renamer-successfully-removed");
             return;
         }
@@ -75,7 +75,7 @@ public abstract class SharedHandRenamerSystem : EntitySystem
         if (_netManager.IsServer)
         {
             handRenamer.Charge -= 1;
-            _renameSystem.Rename(target, handLabeler.AssignedLabel, handRenamer.LifeTime);
+            _renameSystem.Rename(target, handLabeler.AssignedLabel, handRenamer.RenameLifeTime);
         }
 
         Dirty(uid, handRenamer);

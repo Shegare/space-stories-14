@@ -23,7 +23,7 @@ public sealed class TemporaryRenameSystem : EntitySystem
         {
             if (comp.LifeTime == null || comp.LifeTime <= 0)
             {
-                comp.CurrentName = null;
+                comp.TemporaryName = null;
                 _nameModifier.RefreshNameModifiers(uid);
                 RemComp<TemporaryRenameComponent>(uid);
             }
@@ -34,9 +34,9 @@ public sealed class TemporaryRenameSystem : EntitySystem
 
     private void OnLabelCompMapInit(Entity<TemporaryRenameComponent> ent, ref MapInitEvent args)
     {
-        if (!string.IsNullOrEmpty(ent.Comp.CurrentName))
+        if (!string.IsNullOrEmpty(ent.Comp.TemporaryName))
         {
-            ent.Comp.CurrentName = Loc.GetString(ent.Comp.CurrentName);
+            ent.Comp.TemporaryName = Loc.GetString(ent.Comp.TemporaryName);
             Dirty(ent);
         }
 
@@ -48,7 +48,7 @@ public sealed class TemporaryRenameSystem : EntitySystem
         var rename = EnsureComp<TemporaryRenameComponent>(uid);
 
         rename.LifeTime = lifeTime;
-        rename.CurrentName = text;
+        rename.TemporaryName = text;
         _nameModifier.RefreshNameModifiers(uid);
 
         Dirty(uid, rename);
@@ -56,7 +56,7 @@ public sealed class TemporaryRenameSystem : EntitySystem
 
     private void OnRefreshNameModifiers(Entity<TemporaryRenameComponent> entity, ref RefreshNameModifiersEvent args)
     {
-        if (!string.IsNullOrEmpty(entity.Comp.CurrentName))
-            args.AddModifier(entity.Comp.CurrentName);
+        if (!string.IsNullOrEmpty(entity.Comp.TemporaryName))
+            args.AddModifier(entity.Comp.TemporaryName);
     }
 }

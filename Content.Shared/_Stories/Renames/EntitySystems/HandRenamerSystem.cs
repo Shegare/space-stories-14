@@ -10,5 +10,5 @@ public sealed partial class HandRenamerComponent : Component
     public int Charge = 5;
 
     [DataField, AutoNetworkedField]
-    public float LifeTime = 180f; // 3 minutes
+    public float RenameLifeTime = 180f; // 3 minutes
 }

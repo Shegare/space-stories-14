@@ -7,7 +7,7 @@ namespace Content.Shared._Stories.Renames;
 public sealed partial class TemporaryRenameComponent : Component
 {
     [DataField, AutoNetworkedField]
-    public string? CurrentName { get; set; }
+    public string? TemporaryName { get; set; }
 
     [DataField, AutoNetworkedField]
     public float? LifeTime;

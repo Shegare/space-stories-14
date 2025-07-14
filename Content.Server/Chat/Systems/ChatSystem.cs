@@ -181,7 +181,7 @@ public sealed partial class ChatSystem : SharedChatSystem
         bool ignoreActionBlocker = false
         )
     {
-        _chatFilterSystem.CatchBanword(source, ref message, desiredType); // Stories-ChatFilter
+        _chatFilterSystem.CatchBanword(source, ref message, ref desiredType); // Stories-ChatFilter
 
         if (HasComp<GhostComponent>(source))
         {

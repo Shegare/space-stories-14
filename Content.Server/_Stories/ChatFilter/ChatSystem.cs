@@ -1,5 +1,7 @@
+using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
+using Content.Shared.Database;
 
 namespace Content.Server.Chat.Systems;
 
@@ -147,7 +149,9 @@ public sealed partial class ChatSystem
         if (string.IsNullOrEmpty(message))
             return false;
 
-        var words = message.Split(new[] { ' ', '\t', '\n', '\r' }, StringSplitOptions.RemoveEmptyEntries);
+        var cleanedMessage = new string(message.Select(c => char.IsPunctuation(c) ? ' ' : c).ToArray());
+        var words = cleanedMessage.Split(new[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
+
         foreach (var word in words)
         {
             foreach (var bannedWord in Banwords)
@@ -186,5 +190,15 @@ public sealed partial class ChatSystem
         }
 
         return message;
+    }
+
+    public void CatchBanword(EntityUid source, ref string message, InGameICChatType? desiredType = null)
+    {
+        if (IsContainsBanWords(message))
+        {
+            _adminLogger.Add(LogType.Action, LogImpact.High, $"{ToPrettyString(source):user} say ban word {message}");
+            message = "кашляет";
+            desiredType = InGameICChatType.Emote;
+        }
     }
 }

@@ -179,13 +179,7 @@ public sealed partial class ChatSystem : SharedChatSystem
         bool ignoreActionBlocker = false
         )
     {
-        // Stories-ChatFilter start
-        if (IsContainsBanWords(message))
-        {
-            message = "кашляет";
-            desiredType = InGameICChatType.Emote;
-        }
-        // Stories-ChatFilter end
+        CatchBanword(source, ref message, desiredType); // Stories-ChatFilter
 
         if (HasComp<GhostComponent>(source))
         {
@@ -288,6 +282,8 @@ public sealed partial class ChatSystem : SharedChatSystem
         ICommonSession? player = null
         )
     {
+        CatchBanword(source, ref message); // Stories-ChatFilter
+
         if (!CanSendInGame(message, shell, player))
             return;
 

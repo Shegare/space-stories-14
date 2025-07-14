@@ -1,12 +1,16 @@
 using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
+using Content.Server.Administration.Logs;
+using Content.Server.Chat.Systems;
 using Content.Shared.Database;
 
-namespace Content.Server.Chat.Systems;
+namespace Content.Server._Stories.ChatFilter;
 
-public sealed partial class ChatSystem
+public sealed class ChatFilterSystem : EntitySystem
 {
+    [Dependency] private readonly IAdminLogManager _adminLogger = default!;
+
     private static readonly Dictionary<string, string> SlangReplace = new()
     {
         // Game
@@ -164,7 +168,7 @@ public sealed partial class ChatSystem
         return false;
     }
 
-    private string ReplaceWords(string message)
+    public string ReplaceWords(string message)
     {
         if (string.IsNullOrEmpty(message))
             return message;
@@ -197,7 +201,7 @@ public sealed partial class ChatSystem
         if (IsContainsBanWords(message))
         {
             _adminLogger.Add(LogType.Action, LogImpact.High, $"{ToPrettyString(source):user} say ban word {message}");
-            message = "кашляет";
+            message = (desiredType == null) ? "кхем-кхем..." : "кашляет";
             desiredType = InGameICChatType.Emote;
         }
     }

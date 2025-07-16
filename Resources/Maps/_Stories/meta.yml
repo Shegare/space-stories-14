@@ -1,11 +1,11 @@
 meta:
   format: 7
   category: Map
-  engineVersion: 262.0.0
+  engineVersion: 260.2.0
   forkId: ""
   forkVersion: ""
-  time: 07/06/2025 14:51:14
-  entityCount: 28755
+  time: 07/11/2025 09:32:56
+  entityCount: 28756
 maps:
 - 1
 grids:
@@ -12378,7 +12378,7 @@ entities:
       pos: 11.5,29.5
       parent: 2
     - type: Door
-      secondsUntilStateChange: -6491.718
+      secondsUntilStateChange: -6516.7114
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -70135,6 +70135,14 @@ entities:
     - type: Transform
       pos: -40.5,33.5
       parent: 2
+- proto: ComputerSalvageJobBoard
+  entities:
+  - uid: 28756
+    components:
+    - type: Transform
+      rot: -1.5707963267948966 rad
+      pos: -39.5,31.5
+      parent: 2
 - proto: ComputerShuttleCargo
   entities:
   - uid: 10941
@@ -84907,7 +84915,7 @@ entities:
       pos: 31.5,-33.5
       parent: 2
     - type: Door
-      secondsUntilStateChange: -37913.79
+      secondsUntilStateChange: -37938.785
       state: Closing
   - uid: 13230
     components:
@@ -132756,6 +132764,18 @@ entities:
     - type: Transform
       pos: -30.571024,-55.578983
       parent: 2
+- proto: MatterBinStockPart
+  entities:
+  - uid: 19812
+    components:
+    - type: Transform
+      pos: 0.44185066,-33.171204
+      parent: 2
+  - uid: 19813
+    components:
+    - type: Transform
+      pos: 0.31685066,-32.99933
+      parent: 2
 - proto: MechEquipmentGrabberSmall
   entities:
   - uid: 19814
@@ -132965,16 +132985,6 @@ entities:
       parent: 2
 - proto: MicroManipulatorStockPart
   entities:
-  - uid: 19812
-    components:
-    - type: Transform
-      pos: 0.44185066,-33.171204
-      parent: 2
-  - uid: 19813
-    components:
-    - type: Transform
-      pos: 0.31685066,-32.99933
-      parent: 2
   - uid: 19851
     components:
     - type: Transform
@@ -186198,7 +186208,7 @@ entities:
       pos: -28.5,-5.5
       parent: 2
     - type: Door
-      secondsUntilStateChange: -43625.7
+      secondsUntilStateChange: -43650.695
       state: Opening
   - uid: 28732
     components:

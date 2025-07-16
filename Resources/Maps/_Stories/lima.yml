@@ -1,11 +1,11 @@
 meta:
   format: 7
   category: Map
-  engineVersion: 262.0.0
+  engineVersion: 260.2.0
   forkId: ""
   forkVersion: ""
-  time: 07/06/2025 14:50:42
-  entityCount: 28831
+  time: 07/11/2025 09:31:48
+  entityCount: 28832
 maps:
 - 1
 grids:
@@ -13159,7 +13159,7 @@ entities:
       pos: 5.5,-61.5
       parent: 2
     - type: Door
-      secondsUntilStateChange: -132128.61
+      secondsUntilStateChange: -132192.83
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -13351,7 +13351,7 @@ entities:
       pos: 29.5,-79.5
       parent: 2
     - type: Door
-      secondsUntilStateChange: -170438.08
+      secondsUntilStateChange: -170502.3
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -13383,7 +13383,7 @@ entities:
       pos: 16.5,-101.5
       parent: 2
     - type: Door
-      secondsUntilStateChange: -99180.15
+      secondsUntilStateChange: -99244.37
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -15446,7 +15446,7 @@ entities:
       pos: 42.5,-69.5
       parent: 2
     - type: Door
-      secondsUntilStateChange: -170692.84
+      secondsUntilStateChange: -170757.06
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -72100,6 +72100,14 @@ entities:
       rot: -1.5707963267948966 rad
       pos: -7.5,-127.5
       parent: 2
+- proto: ComputerSalvageJobBoard
+  entities:
+  - uid: 22406
+    components:
+    - type: Transform
+      rot: -1.5707963267948966 rad
+      pos: -7.5,-126.5
+      parent: 2
 - proto: ComputerShuttleCargo
   entities:
   - uid: 11348
@@ -88406,7 +88414,7 @@ entities:
   - uid: 14027
     components:
     - type: Transform
-      pos: -11.277068,-129.29681
+      pos: -11.3067665,-129.2666
       parent: 2
 - proto: FoodSnackChocolate
   entities:

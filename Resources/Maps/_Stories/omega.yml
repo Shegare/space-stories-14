@@ -1,10 +1,10 @@
 meta:
   format: 7
   category: Map
-  engineVersion: 262.0.0
+  engineVersion: 260.2.0
   forkId: ""
   forkVersion: ""
-  time: 07/06/2025 14:51:33
+  time: 07/11/2025 09:34:35
   entityCount: 14221
 maps:
 - 473
@@ -9102,7 +9102,7 @@ entities:
   - uid: 13265
     components:
     - type: Transform
-      pos: 23.03569,17.459896
+      pos: 22.60081,17.492435
       parent: 4812
   - uid: 13656
     components:
@@ -12745,7 +12745,7 @@ entities:
   - uid: 9501
     components:
     - type: Transform
-      pos: 22.50444,17.647528
+      pos: 22.366434,17.750248
       parent: 4812
   - uid: 13721
     components:
@@ -29193,6 +29193,23 @@ entities:
     - type: Transform
       pos: -31.5,33.5
       parent: 4812
+- proto: CapacitorStockPart
+  entities:
+  - uid: 6210
+    components:
+    - type: Transform
+      pos: 7.701914,-18.299206
+      parent: 4812
+  - uid: 6211
+    components:
+    - type: Transform
+      pos: 7.451914,-18.299206
+      parent: 4812
+  - uid: 6212
+    components:
+    - type: Transform
+      pos: 7.5679626,-16.149172
+      parent: 4812
 - proto: CaptainIDCard
   entities:
   - uid: 2588
@@ -32008,12 +32025,6 @@ entities:
       rot: 1.5707963267948966 rad
       pos: -38.5,10.5
       parent: 4812
-  - uid: 9225
-    components:
-    - type: Transform
-      rot: -1.5707963267948966 rad
-      pos: 23.5,16.5
-      parent: 4812
   - uid: 9566
     components:
     - type: Transform
@@ -32360,6 +32371,11 @@ entities:
     components:
     - type: Transform
       pos: -17.5,15.5
+      parent: 4812
+  - uid: 9225
+    components:
+    - type: Transform
+      pos: 23.5,16.5
       parent: 4812
   - uid: 9575
     components:
@@ -35469,6 +35485,13 @@ entities:
     - type: Transform
       rot: 1.5707963267948966 rad
       pos: 22.5,16.5
+      parent: 4812
+- proto: ComputerSalvageJobBoard
+  entities:
+  - uid: 9459
+    components:
+    - type: Transform
+      pos: 23.5,17.5
       parent: 4812
 - proto: ComputerShuttleCargo
   entities:
@@ -62773,7 +62796,7 @@ entities:
   - uid: 13255
     components:
     - type: Transform
-      pos: 23.53569,17.595407
+      pos: 29.374247,16.390873
       parent: 4812
 - proto: HandheldHealthAnalyzer
   entities:
@@ -65374,6 +65397,18 @@ entities:
     - type: Transform
       pos: -37.5,-28.5
       parent: 4812
+- proto: MatterBinStockPart
+  entities:
+  - uid: 6200
+    components:
+    - type: Transform
+      pos: 7.405039,-15.314831
+      parent: 4812
+  - uid: 6201
+    components:
+    - type: Transform
+      pos: 7.701914,-15.330456
+      parent: 4812
 - proto: MechEquipmentGrabberSmall
   entities:
   - uid: 3442
@@ -65463,7 +65498,7 @@ entities:
   - uid: 12788
     components:
     - type: Transform
-      pos: 29.5,16.5
+      pos: 29.514872,16.69556
       parent: 4812
 - proto: MedkitToxinFilled
   entities:
@@ -65474,16 +65509,6 @@ entities:
       parent: 4812
 - proto: MicroManipulatorStockPart
   entities:
-  - uid: 6200
-    components:
-    - type: Transform
-      pos: 7.405039,-15.314831
-      parent: 4812
-  - uid: 6201
-    components:
-    - type: Transform
-      pos: 7.701914,-15.330456
-      parent: 4812
   - uid: 6202
     components:
     - type: Transform
@@ -65498,21 +65523,6 @@ entities:
     components:
     - type: Transform
       pos: 7.811289,-15.783581
-      parent: 4812
-  - uid: 6210
-    components:
-    - type: Transform
-      pos: 7.701914,-18.299206
-      parent: 4812
-  - uid: 6211
-    components:
-    - type: Transform
-      pos: 7.451914,-18.299206
-      parent: 4812
-  - uid: 6212
-    components:
-    - type: Transform
-      pos: 7.5679626,-16.149172
       parent: 4812
 - proto: MicrophoneInstrument
   entities:
@@ -78499,11 +78509,6 @@ entities:
     components:
     - type: Transform
       pos: -39.5,10.5
-      parent: 4812
-  - uid: 9459
-    components:
-    - type: Transform
-      pos: 23.5,17.5
       parent: 4812
   - uid: 9585
     components:

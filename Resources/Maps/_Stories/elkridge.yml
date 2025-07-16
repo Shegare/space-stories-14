@@ -1,10 +1,10 @@
 meta:
   format: 7
   category: Map
-  engineVersion: 262.0.0
+  engineVersion: 260.2.0
   forkId: ""
   forkVersion: ""
-  time: 07/06/2025 14:48:19
+  time: 07/11/2025 09:26:51
   entityCount: 17584
 maps:
 - 1
@@ -14500,7 +14500,7 @@ entities:
       pos: 47.5,5.5
       parent: 2
     - type: Door
-      secondsUntilStateChange: -464382.34
+      secondsUntilStateChange: -464428.78
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -41702,6 +41702,25 @@ entities:
     - type: Transform
       pos: -13.084935,-44.300785
       parent: 2
+- proto: CapacitorStockPart
+  entities:
+  - uid: 5546
+    components:
+    - type: Transform
+      pos: -19.233772,25.963198
+      parent: 2
+  - uid: 5547
+    components:
+    - type: Transform
+      pos: 32.166813,-17.551153
+      parent: 2
+    - type: Stack
+      count: 2
+  - uid: 5548
+    components:
+    - type: Transform
+      pos: 27.703878,37.44894
+      parent: 2
 - proto: CaptainIDCard
   entities:
   - uid: 5549
@@ -49287,6 +49306,13 @@ entities:
       rot: 3.141592653589793 rad
       pos: 24.5,45.5
       parent: 2
+- proto: ComputerSalvageJobBoard
+  entities:
+  - uid: 6810
+    components:
+    - type: Transform
+      pos: 21.5,40.5
+      parent: 2
 - proto: ComputerShuttleCargo
   entities:
   - uid: 6882
@@ -49298,11 +49324,6 @@ entities:
     components:
     - type: Transform
       pos: -37.5,-5.5
-      parent: 2
-  - uid: 6884
-    components:
-    - type: Transform
-      pos: 14.5,39.5
       parent: 2
   - uid: 6885
     components:
@@ -86199,6 +86220,13 @@ entities:
     - type: Transform
       pos: 13.618376,-18.105558
       parent: 2
+- proto: MatterBinStockPart
+  entities:
+  - uid: 12065
+    components:
+    - type: Transform
+      pos: -13.066984,24.89437
+      parent: 2
 - proto: Mattress
   entities:
   - uid: 12066
@@ -86340,30 +86368,6 @@ entities:
     components:
     - type: Transform
       pos: 35.608074,7.556761
-      parent: 2
-- proto: MicroManipulatorStockPart
-  entities:
-  - uid: 5546
-    components:
-    - type: Transform
-      pos: -19.233772,25.963198
-      parent: 2
-  - uid: 5547
-    components:
-    - type: Transform
-      pos: 32.166813,-17.551153
-      parent: 2
-    - type: Stack
-      count: 2
-  - uid: 5548
-    components:
-    - type: Transform
-      pos: 27.703878,37.44894
-      parent: 2
-  - uid: 12065
-    components:
-    - type: Transform
-      pos: -13.066984,24.89437
       parent: 2
 - proto: MicrophoneInstrument
   entities:
